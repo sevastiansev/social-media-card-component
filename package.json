@@ -1,0 +1,15 @@
+{
+  "name": "card-component",
+  "version": "1.0.0",
+  "description": "social media card component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:watch": "sass --watch assets/scss/style.scss  assets/css/style.css"
+  },
+  "author": "sebastiansv",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.57.1"
+  }
+}
