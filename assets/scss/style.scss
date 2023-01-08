@@ -45,11 +45,13 @@ button{
     min-height: 100vh;
     background: rgb(0, 0, 0, 0.3);
     position: fixed;
+    clip-path: circle(0.0% at 50% 50%);
+    transition: all .3s ease-in;
     top: 0;
     left: 0;
     .modal{
         width:90%;
-        max-width: 500px;
+        max-width:400px;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -74,7 +76,7 @@ button{
             justify-content: space-between;
             .title-modal{
                 .title{
-                    font-size: 1em;
+                    font-size: 1.1em;
                     text-transform: capitalize;
                     font-weight: 500;
                 }
@@ -99,5 +101,58 @@ button{
                 }
             }
         }
+        .card-body{
+            padding: 0.2em 0em;
+            .card-subtitle{
+                padding: 0.3em 0em;
+                .subtitle{
+                    font-size: 15px;
+                    font-weight: 400;
+                    color: #333;
+                }
+            }
+            .card-content-icons{
+                width: 100%;
+                margin: 10px 0px;
+                & .list-icons{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 1em;
+                    & .list-item{
+                        list-style: none;
+                        .icon{
+                            width: 55px;
+                            height: 55px;
+                            line-height: 55px;
+                            display: block;
+                            text-align: center;
+                            border: 1px solid rgb(241, 241, 241);
+                            border-radius: 50%;
+                            & i{
+                                font-size: 1.2em;
+                            }
+                            &.icon.facebook{
+                                color: #447fff;
+                            }
+                            &.icon.whatsapp{
+                                color: #43d854;
+                            }
+                            &.icon.instagram{
+                                color: #ff127d;
+                            }
+                            &.icon.tiktok{
+                                color: rgb(62, 62, 61);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
+}
+.box-modal.active{
+    clip-path: circle(70.7% at 50% 50%);
+    transition: all .3s ease-in;
 }
